@@ -4,17 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
-body{
+body {
     font-family: sans-serif;
     margin: 0;
 }
 
-a{
-text-decoration: none;
-color: #00394B;
+a {
+    text-decoration: none;
+    color: #00394B;
 }
 
-header{
+header {
     display: flex;
     min-height: 70px;
     background-color: white;
@@ -23,25 +23,29 @@ header{
     padding: 10px;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img{
+.logo img {
     height: 75px;
 }
 
-nav a{
+nav a {
     font-weight: 600;
     padding-right: 10px;
 }
 
-nav a:hover{
+nav a:hover {
     color: #00C2FF;
 }
 
-body{
+.name-color{
+    color: #00C2FF;
+}
+
+body {
     background-color: #E1F8FF;
 }
 
@@ -52,45 +56,51 @@ body{
     padding-right: 70px;
     padding-left: 220px;
     padding-top: 150px;
-  }
+}
 
-  .body-left-side{
+.body-left-side {
     font-size: 2.5rem;
     font-family: 'Alfa Slab One', cursive;
     color: #023849;
     width: 50%;
-  }
+}
 
-  .body-slogan {
+.body-slogan {
     font-family: "Inter", sans-serif;
     margin-top: 1%;
-    font-size: 1.2rem; 
-  }
+    font-size: 1.2rem;
+}
 
-  .body-right-side{
-      width: 50%;
-  }
-  .messi1 {
+.body-right-side {
+    width: 50%;
+}
+
+.messi1 {
     top: 65px;
     width: 65%;
     border-radius: 25px;
-  }
+}
 
- /*Estadisticas*/
+/*Stats*/
 
- .stats-title {
+.stats-title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 3.5rem;
     color: #022A36;
     margin-top: 100px;
     padding-bottom: 20px;
-    text-align:center;
- }
- .stats{
+    text-align: center;
+}
+
+.stats {
     display: flex;
     justify-content: space-evenly;
 }
-.imagen-stats-goals,.imagen-stats-matches,.imagen-stats-assists,.imagen-stats-titles{
+
+.imagen-stats-goals,
+.imagen-stats-matches,
+.imagen-stats-assists,
+.imagen-stats-titles {
     display: inline-flex;
     width: 300px;
     height: 350px;
@@ -101,7 +111,7 @@ body{
     margin: 0px auto;
 }
 
-.info{
+.info {
     position: absolute;
     width: 300px;
     height: 350px;
@@ -116,54 +126,59 @@ body{
     font-family: 'Bebas Neue', cursive;
 }
 
-.imagen-stats-goals:hover .info,.imagen-stats-assists:hover .info,.imagen-stats-matches:hover .info,.imagen-stats-titles:hover .info{
+.imagen-stats-goals:hover .info,
+.imagen-stats-assists:hover .info,
+.imagen-stats-matches:hover .info,
+.imagen-stats-titles:hover .info {
     opacity: 0;
 }
-.headline{
+
+.headline {
     position: absolute;
     font-size: 45px;
     color: white;
 }
 
-.info p{
+.info p {
     text-align: center;
-}   
- /*Estadisticas*/
+}
+
+/*Stats*/
 
 
-  .goals{
+.goals {
     position: relative;
     overflow: hidden;
     margin: 0;
     border: 0px;
     padding: 0;
-  }
+}
 
 
-  .amount-goals{
-      margin-top: 80px;
-      display: flex;
-      justify-content: space-evenly;
-      font-family: 'Bebas Neue', cursive;
-      font-size: 2rem; 
-      text-align: center;
-      color: black ;
-      
-  }
-  
-  .amount{
+.amount-goals {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+
+}
+
+.amount {
     justify-content: center;
     display: flex;
     flex-wrap: nowrap;
     border: inset 6px white;
-    border-radius: 30%;
-    width: 230px;
-    height: 230px;
-    background-color: rgba(0, 153, 255, 0.205);
-  }
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 68, 255, 0.144);
+}
 
 
-.title-goals{
+.title-goals {
     font-size: 5.5rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #022A36;
@@ -173,45 +188,45 @@ body{
     font-weight: bold;
 }
 
-.video-goals{
+.video-goals {
     margin-top: -80px;
 }
 
-footer{
+footer {
     background-color: white;
 }
 
-.main-footer{
-display: flex;
-flex-direction: row;
-height: 70%;
-margin-top: 50px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.main-footer {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    margin-top: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.footer-right-side{
+.footer-right-side {
     width: 50%;
     justify-content: flex-end;
     padding-top: 60px;
     padding-left: 40%;
-    
+
 }
 
-.footer-left-side{
+.footer-left-side {
     width: 50%;
     justify-content: flex-start;
     padding-left: 5%;
     font-size: 1.5rem;
 }
 
-.register{
+.register {
     font-size: 0.9rem;
 }
 
-.social-media{
+.social-media {
     top: 40%;
     font-size: 2rem;
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
     width: 50%;
     padding-left: 25%;
@@ -219,7 +234,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     padding-bottom: 20px;
 }
 
-footer a:hover{
+footer a:hover {
     color: #00C2FF;
 }
 
@@ -227,51 +242,58 @@ footer a:hover{
 
 @media only screen and (max-width: 700px) {
 
-header{
-    flex-direction: column;
-}
+    header {
+        flex-direction: column;
+    }
 
-nav{
-    padding: 10px 0px;
-}
+    nav {
+        padding: 10px 0px;
+    }
 
-.main-body{
-    display: block;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    text-align: center;
-}
-.body-right-side{
-    width: 100%;
-}
-.body-left-side{
-    width: 100%;
-}
-.messi1{
-    width: 52%;
-}
-.amount-goals{
-    font-size: 1.5rem;
-}
-.title-goals{
-    font-size: 3.5rem;
-}
+    .main-body {
+        display: block;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
 
-.messi-stats{
-    margin-top: 30px;
-    width: 95%;
-    border-radius: 0px;
-  }
-iframe{
-    width: 100%;
-    height: 270px;
-}
+    .body-right-side {
+        width: 100%;
+    }
 
-.footer-left-side{
-    width: 50%;
-}
-.footer-right-side{
-    padding-left: 20%;
-}
+    .body-left-side {
+        width: 100%;
+    }
+
+    .messi1 {
+        width: 52%;
+    }
+
+    .amount-goals {
+        font-size: 1.5rem;
+    }
+
+    .title-goals {
+        font-size: 3.5rem;
+    }
+
+    .messi-stats {
+        margin-top: 30px;
+        width: 95%;
+        border-radius: 0px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 270px;
+    }
+
+    .footer-left-side {
+        width: 50%;
+    }
+
+    .footer-right-side {
+        padding-left: 20%;
+    }
 }
