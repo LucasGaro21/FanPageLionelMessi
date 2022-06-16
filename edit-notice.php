@@ -8,8 +8,8 @@ if  (isset($_GET['id'])) {
   $sql = "SELECT * FROM NOTICES WHERE id=$id";
   $query = $conn->prepare($sql);
   $query->execute();
-  if (($query) == 1) {
-    $row = $query;
+  if (($sql) == 1) {
+    $row = $sql;
     $title = $row['title'];
     $description = $row['description'];
   }
@@ -50,11 +50,10 @@ if (isset($_POST['edit'])) {
 <body style= "background-color: #E1F8FF;">
   <header>
     <nav class="navbar navbar-red bg-red">
-      <a href="index.php" class="logo">
+      <a href="notices.php" class="logo">
         <img src="images/LogoMessi4.png" alt="">
       </a>
       <div class="ms-auto" style= "display: flex; font-size: 1rem;" >
-      <a href="front-notice.php" class="nav-link">Noticias</a>
       <a href="logout.php" class="nav-link">Cerrar Sesion</a>
       </div>
     </nav>
@@ -66,11 +65,12 @@ if (isset($_POST['edit'])) {
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
       <form action="edit-notice.php?id=<?php echo $_GET['id']; ?>" method="POST">
+      
         <div class="form-group">
           <input name="title" type="text" class="form-control" value="<?php echo $title; ?>" placeholder="Editar Titulo">
         </div>
         <div class="form-group">
-        <textarea name="description" class="form-control" cols="30" rows="10"><?php echo $description;?></textarea>
+        <textarea name="description" class="form-control" cols="30" rows="10" placeholder="Editar Descripción"><?php echo $description;?></textarea>
         </div>
         <button class="btn-warning" name="edit">
           Guardar

@@ -2,9 +2,8 @@
   //session_start();
 
   require 'database.php';
-  if (@!$_SESSION['user_id']){
-    header("Location: indexhide.php");
-  }
+
+  
 
   if (isset($_SESSION['user_id'])) {
     $records = $conn->prepare('SELECT id, email, name, password FROM users WHERE id = :id');
@@ -38,7 +37,7 @@
 
 <body>
   <header>
-    <a href="index.php" class="logo">
+    <a href="index2.php" class="logo">
       <img src="images/LogoMessi4.png" alt="">
     </a>
     <nav>
@@ -48,13 +47,14 @@
       <?php if(!empty($user)): ?>
   
       <?= $user['name']; ?>
+      <?php endif; ?>
       <a href="logout.php">
       <span class="material-symbols-outlined">
     logout
     </span>
       </a>
     
-      <?php endif; ?>
+      
     </nav>
   </header>
 

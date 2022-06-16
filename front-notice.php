@@ -38,23 +38,18 @@ if (isset($_SESSION['user_id'])) {
 <body style= "background-color: #E1F8FF;">
   <header>
     <nav class="navbar navbar-red bg-red">
-      <a href="index.php" class="logo">
+      <a href="index2.php" class="logo">
         <img src="images/LogoMessi4.png" alt="">
       </a>
       <div class="ms-auto" style= "display: flex; font-size: 1rem;" >
-      <a href="histo.php" class="nav-link">Historia</a>
-      <a href="" class="nav-link">Trayectoria</a>
-      <a href="front-notice.php" class="nav-link">Noticias</a>
-      <?php if(!empty($user)): ?>
-  
-  <?= $user['name']; ?>
+      <a href="histo.php" class="nav-link" style= "color: #00394B;">Historia</a>
+      <a href="" class="nav-link"style= "color: #00394B;">Trayectoria</a>
+      <a href="front-notice.php" class="nav-link" style= "color: #00394B;">Noticias</a>
   <a href="logout.php">
-  <span class="material-symbols-outlined">
+  <span class="material-symbols-outlined"style= "color: #00394B;">
 logout
 </span>
   </a>
-
-  <?php endif; ?>
       </div>
     </nav>
     </header>
@@ -62,7 +57,7 @@ logout
     <div class="container mt-1">
     
         
-  <?php       $sql = "SELECT * FROM NOTICES;";
+  <?php $sql = "SELECT * FROM NOTICES;";
 
           $query = $conn->prepare($sql);
           $query->execute();
@@ -70,18 +65,19 @@ logout
 
           foreach ($row as $key => $value) {
             echo '
-            <div class="card"style="margin-bottom: 10px;">
-      <div class="card-body" >
-            <tr>
-            <div style="font-size: 1.5rem">
-            <td>',$value["title"],'</td>
-            </div>
-            <br/>
+            <div class="card"style="margin-bottom: 10px; margin-top: 10px;">
+              <div class="card-body" >
+                <tr>
+                  <img class="img-notices" src="./uploads/',$value['image'],'">
+                  <div style="font-size: 1.5rem">
+                   <td>',$value["title"],'</td>
+                  </div>
+                <br/>
             <td>',$value["description"],'</td>
-            
-          </tr><br/>
+          </tr>
+          <br/>
           </div>
-      </div>
+          </div>
         ';
       
           }

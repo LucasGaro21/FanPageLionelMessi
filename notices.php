@@ -25,7 +25,7 @@
 <body style= "background-color: #E1F8FF;">
   <header>
     <nav class="navbar navbar-red bg-red">
-      <a href="index.php" class="logo">
+      <a href="" class="logo">
         <img src="images/LogoMessi4.png" alt="">
       </a>
       <div class="ms-auto" style= "display: flex; font-size: 1rem;" >
@@ -38,27 +38,21 @@
 
 <main class="container p-4">
   <div class="row">
-    <div class="col-md-4">
-      <!-- MESSAGES -->
+    <div class="col-md-4">      
 
-      <?php if (isset($_SESSION['message'])) { ?>
-      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-        <?= $_SESSION['message']?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <?php session_unset(); } ?>
-
-      <!-- ADD Notice FORM -->
+      <!--Agregar noticias-->
       <div class="card card-body">
-        <form action="save-notice.php" method="POST">
+        <form action="save-notice.php" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <input type="text" name="title" class="form-control" placeholder="Titulo de la Noticia" autofocus>
           </div>
           <div class="form-group">
             <textarea name="description" rows="2" class="form-control" placeholder="Texto de la Noticia"></textarea>
           </div>
+          <div class="form-group">
+            <input type="file" name="imagen" class="form-control" id="imagen" required>
+            
+            </div>
           <input type="submit" name="save-notice" class="btn btn-info btn-block" value="Guardar">
         </form>
       </div>
@@ -67,6 +61,7 @@
         <table class="table table-bordered" style="background-color: white;">
         <thead>
           <tr>
+            <th>Imagen</th>
             <th>Titulo</th>
             <th>Descripcion</th>
             <th>Fecha de creacion</th>
@@ -84,6 +79,7 @@
 
           foreach ($row as $key => $value) {
             echo '<tr>
+            <td>',$value["image"],'</td>
             <td>',$value["title"],'</td>
             <td>',$value["description"],'</td>
             <td>',$value["created_at"],'</td>
@@ -97,10 +93,7 @@
             </td>
           </tr>
         </tbody>';
-      
           }
-       
-            
           ?>
         </table>
       </div>

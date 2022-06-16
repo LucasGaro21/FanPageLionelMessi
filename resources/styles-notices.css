@@ -33,6 +33,10 @@ nav a:hover {
   color: #00C2FF;
 }
 
+.nav-link:hover, .material-symbols-outlined:hover{
+  color: #00C2FF!important;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -47,3 +51,14 @@ body {
   padding-left: 220px;
   padding-top: 10px;
 }
+
+.img-notices{
+   height: 350px; 
+   width: 750px;
+   background-size: cover;
+   display: flex;
+   padding-left: 20%;
+   padding-bottom: 30px;
+  }
+
+

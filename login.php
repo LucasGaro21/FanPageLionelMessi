@@ -14,12 +14,12 @@
     $message = '';
 
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-      if($_SESSION['user_id']==8){
+      if($_SESSION['user_id']==1){
         header("Location: /Fan Page/notices.php");
         
       }
       else{
-      header("Location: /Fan Page/index.php");
+      header("Location: /Fan Page/index2.php");
       
     }
     } else {
@@ -49,7 +49,7 @@
 <body>
   
   <header>
-    <a href="indexhide.php" class="logo">
+    <a href="index.php" class="logo">
       <img src="images/LogoMessi4.png" alt="">
     </a>
     <nav>
@@ -68,9 +68,8 @@
     <?= $message ?>
   </p>
   <?php endif; ?>
-      <p class="register"><a href="signup.php">Registrarse</a></p>
-      <p><a href="#">¿Has olvidado la contraseña?</a></p>
-      <a href=""><button class="btn"><span>Ingresar</span></button></a>
+      <p class="register"><a href="signup.php">Registrarse</a></p> 
+     <a href=""><button class="btn"><span>Ingresar</span></button></a>
     </form>
 
   </section>

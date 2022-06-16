@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: indexhide.php');
+  header('Location: index.php');
 ?>

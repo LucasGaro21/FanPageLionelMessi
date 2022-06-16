@@ -41,7 +41,7 @@
         <p> <?= $message ?></p>
         <?php endif; ?>
   <header>
-    <a href="indexhide.php" class="logo">
+    <a href="index.php" class="logo">
         <img src="images/LogoMessi4.png" alt="">
     </a>
     <nav>
@@ -54,9 +54,9 @@
         <h1>Suscripciones</h1>
       <h5>Registrar</h5>
       <form action="signup.php" method="POST">
-      <input name="name" class="controls" type="name"  value="" placeholder="Nombre">
-      <input name="email" class="controls" type="email"  value="" placeholder="Email">
-      <input name="password" class="controls" type="password"  value="" placeholder="Contraseña">
+      <input name="name" class="controls" type="name"  value="" placeholder="Nombre" required>
+      <input name="email" class="controls" type="email"  value="" placeholder="Email" required>
+      <input name="password" class="controls" type="password"  value="" placeholder="Contraseña" required>
       <a href=""><button class="btn"><span>Registrar</span></button></a>
     </form>
     </section>
