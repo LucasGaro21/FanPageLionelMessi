@@ -54,11 +54,11 @@ body {
 
 .img-notices{
    height: 350px; 
-   width: 750px;
-   background-size: cover;
-   display: flex;
-   padding-left: 20%;
+   width: 650px;
+   object-fit: cover; 
    padding-bottom: 30px;
+   margin-left: 10%;
   }
+
 
 

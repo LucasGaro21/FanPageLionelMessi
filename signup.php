@@ -31,7 +31,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32"  href="/Fan Page/images/messi-vector.jpg">
-    <title>Iniciar Sesión</title>
+    <title>Registrarse</title>
     <link rel="stylesheet" href="./resources/styles-login.css">
     <link rel="stylesheet" href="./resources/font.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -54,12 +54,14 @@
         <h1>Suscripciones</h1>
       <h5>Registrar</h5>
       <form action="signup.php" method="POST">
-      <input name="name" class="controls" type="name"  value="" placeholder="Nombre" required>
+      <input name="name" class="controls username" type="name"  value="" placeholder="Nombre" required>
       <input name="email" class="controls" type="email"  value="" placeholder="Email" required>
-      <input name="password" class="controls" type="password"  value="" placeholder="Contraseña" required>
-      <a href=""><button class="btn"><span>Registrar</span></button></a>
+      <input name="password" class="controls password" type="password"  value="" placeholder="Contraseña" required>
+      <button class="btn btn-register"><span>Registrar</span></button>
     </form>
     </section>
+  
+  <script src="validateRegister.js"></script>
   </body>
   
 </html>

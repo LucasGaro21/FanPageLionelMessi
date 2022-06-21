@@ -15,20 +15,16 @@
 
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       if($_SESSION['user_id']==1){
-        header("Location: /Fan Page/notices.php");
-        
+        header("Location: /Fan Page/notices.php"); 
       }
       else{
       header("Location: /Fan Page/index2.php");
       
     }
     } else {
-      $message = 'La contraseña es incorrecta';
+      $message = 'Contraseña o Email incorrecto';
     }
-  
   }
-  
-  
 
 ?>
 
@@ -61,17 +57,19 @@
     <h1>Suscripciones</h1>
     <h5>Iniciar Sesión</h5>
     <form action="login.php" method="POST">
-      <input name="email" class="controls" type="email" value="" placeholder="Usuario">
-      <input name="password" class="controls" type="password" value="" placeholder="Contraseña">
+      <input name="email" class="controls email" type="email" value="" placeholder="Usuario" required>
+      <input name="password" class="controls password" type="password" value="" placeholder="Contraseña" required>
       <?php if(!empty($message)): ?>
   <p>
     <?= $message ?>
   </p>
   <?php endif; ?>
       <p class="register"><a href="signup.php">Registrarse</a></p> 
-     <a href=""><button class="btn"><span>Ingresar</span></button></a>
+     <a href=""><button class="btn btn-login"><span>Ingresar</span></button></a>
     </form>
 
   </section>
+
+  <script src="validateLogin.js"></script>
 </body>
 </html>

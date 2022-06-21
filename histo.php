@@ -42,7 +42,7 @@
     </a>
     <nav>
       <a href="histo.php" class="nav-link">Historia</a>
-      <a href="" class="nav-link">Trayectoria</a>
+      <a href="trajectory.php" class="nav-link">Trayectoria</a>
       <a href="front-notice.php" class="nav-link">Noticias</a>
       <?php if(!empty($user)): ?>
   

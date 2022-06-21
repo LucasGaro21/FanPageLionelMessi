@@ -1,6 +1,14 @@
 <?php
 include("database.php");  
 
+$page_number = 1;
+
+if (isset($_GET['page'])) {
+   $page_number = $_GET['page'];
+}
+$max_results = 3;
+$row_start = ($page_number - 1) * $max_results;
+
 
 if (isset($_SESSION['user_id'])) {
   $records = $conn->prepare('SELECT id, email, name, password FROM users WHERE id = :id');
@@ -43,7 +51,7 @@ if (isset($_SESSION['user_id'])) {
       </a>
       <div class="ms-auto" style= "display: flex; font-size: 1rem;" >
       <a href="histo.php" class="nav-link" style= "color: #00394B;">Historia</a>
-      <a href="" class="nav-link"style= "color: #00394B;">Trayectoria</a>
+      <a href="trajectory.php" class="nav-link"style= "color: #00394B;">Trayectoria</a>
       <a href="front-notice.php" class="nav-link" style= "color: #00394B;">Noticias</a>
   <a href="logout.php">
   <span class="material-symbols-outlined"style= "color: #00394B;">
@@ -57,19 +65,21 @@ logout
     <div class="container mt-1">
     
         
-  <?php $sql = "SELECT * FROM NOTICES;";
+  <?php $sql = "SELECT * FROM NOTICES LIMIT $row_start, $max_results;";
 
           $query = $conn->prepare($sql);
           $query->execute();
-          $row = $query->fetchAll();   
+          $row = $query->fetchAll(); 
 
           foreach ($row as $key => $value) {
             echo '
-            <div class="card"style="margin-bottom: 10px; margin-top: 10px;">
+            <div class="card"style="margin-bottom: 5px; margin-top: 5px;">
               <div class="card-body" >
                 <tr>
+                
                   <img class="img-notices" src="./uploads/',$value['image'],'">
-                  <div style="font-size: 1.5rem">
+                  
+                  <div style="font-size: 2.5rem; font-family:fantasy;">
                    <td>',$value["title"],'</td>
                   </div>
                 <br/>
@@ -83,6 +93,38 @@ logout
           }
 ?> 
 
-      
+    <div class="pages" style="margin-bottom:10px;">
+
+    <?php 
+    $query2 = $conn->prepare("SELECT * FROM NOTICES;");
+    $query2->execute();
+    $total_notices = $query2->rowCount();
+    $max_pages = ceil($total_notices / $max_results);
+    ?>
+
+<?php
+if ($page_number > 1) {
+  for ($i = 1; $i < $page_number; $i++) {
+    ?>
+  <button class="btn btn-page"><?php echo $i; ?></button>
+    <?php
+  }
+}
+
+?>
+
+      <button class="btn btn-page" style="background-color: #00C1FF; color:white;"><?php echo $page_number; ?></button>
+
+      <?php
+for ($i = $page_number + 1; $i < $max_pages + 1; $i++) {
+  ?>
+<button class="btn btn-page"style="background-color: white; color:black;"><?php echo $i; ?></button>
+  <?php
+}
+      ?>
+
+    </div>
+
+    <script src="goToPage.js"></script>
     </body>
   </html>

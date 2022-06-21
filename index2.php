@@ -45,7 +45,7 @@
     </a>
     <nav>
       <a href="histo.php" class="nav-link">Historia</a>
-      <a href="" class="nav-link">Trayectoria</a>
+      <a href="trajectory.php" class="nav-link">Trayectoria</a>
       <a href="front-notice.php" class="nav-link">Noticias</a>
   <a href="logout.php">
   <span class="material-symbols-outlined">
@@ -63,7 +63,7 @@ logout
       </p>
     </div>
     <div class="body-right-side">
-      <img class="messi1" src="images/messi1.jpg" alt="" />
+      <img class="messi1" src="images/messi-apl.jpg" alt="" />
     </div>
   </div>
 
@@ -94,18 +94,18 @@ logout
 
   <div class="goals">
     <div class="amount-goals">
-      <div class="amount">
-        <div class="amount-arg">
+      <div class="amount" style="color: #000000; background-image: url(./images/flag-arg.jpg); object-fit: cover ;">
+        <div class="amount-arg" >
           <p>86</br></br>Goles en </br>Selección Argentina</p>
         </div>
       </div>
-      <div class="amount">
-        <div class="amount-brc">
+      <div class="amount"style="color: #000000; background-image: url(./images/flag-barca.png); object-fit: cover ;">
+        <div class="amount-brc" >
           <p>672</br></br>Goles en </br>FC Barcelona</p>
         </div>
       </div>
-      <div class="amount">
-        <div class="amount-psg">
+      <div class="amount" style="color: #000000; background-image: url(./images/flag-psg.png); object-fit: cover ;">
+        <div class="amount-psg"  >
           <p>11</br></br>Goles en </br>Paris Saint-Germain</p>
         </div>
       </div>
