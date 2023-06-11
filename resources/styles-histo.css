@@ -1,23 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
+/* Estilos para los enlaces */
 a {
   text-decoration: none;
   color: #00394B;
 }
 
+a:hover {
+  color: #00C2FF;
+}
+
+/* Estilos para el encabezado */
 header {
   display: flex;
   min-height: 70px;
-  background-color: white;
+  background-color: #FFFFFF;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
 }
 
 .logo img {
@@ -26,71 +27,128 @@ header {
 
 nav a {
   font-weight: 600;
-  padding-right: 10px;
   padding: 0.5rem 1rem;
 }
 
-nav a:hover {
-  color: #00C2FF;
-}
-
+/* Estilos para el cuerpo principal */
 body {
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   background-color: #E1F8FF;
 }
 
 .top-body {
   display: flex;
-  flex-direction: row;
-  height: 70%;
-  padding-right: 70px;
-  padding-left: 220px;
-  padding-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .body-left-side {
   color: #023849;
-  width: 50%;
+  margin-right: 20px;
+  flex: 1;
 }
 
 .body-right-side {
-  width: 50%;
+  flex: 1;
 }
 
+.body-right-side img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
 
 h1 {
-  margin-left: 30px;
-  margin-top: 110px;
+  margin: 30px;
   font-family: "Inter", sans-serif;
   color: #00394B;
-}
-
-.first-photo {
-  padding-right: 400px;
+  font-size: 3.5rem;
 }
 
 .first-photo img {
   padding: 10px;
-  padding-top: -100px;
   display: block;
   margin: 0px auto;
   width: 241px;
   height: 359px;
-  opacity: 95%;
+  opacity: 0.95;
 }
-
 
 .main-body {
   font-size: 1rem;
-  text-align: left;
-  margin-left: 150px;
-  margin-right: 150px;
-  line-height: 21px;
+  text-align: center;
+  margin: 0 150px;
   font-family: "Inter", sans-serif;
 }
 
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  margin: 50px 0;
+}
 
+h4 {
+  font-family: "Inter", sans-serif;
+  color: #00394B;
+  font-size: 1.5rem;
+  margin: 50px 0;
+}
+
+/* Estilos para los contenedores de sección */
+.section-container {
+  margin-bottom: 30px;
+}
+
+.section {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/*Barcelona */
+.barcelona .section {
+  border: 10px solid #00235D;
+  background-color: #A50044;
+  color: #FFFFFF;
+}
+
+/*Paris Saint-Germain */
+.psg .section {
+  border: 10px solid #A50044;
+  background-color: #00235D;
+  color: #FFFFFF;
+}
+
+/*Selección Argentina */
+.argentina .section {
+  border: 10px solid #111111;
+  background-color: #75AADB;
+  color: #FFFFFF;
+}
+
+/*Logros Individuales */
+.individual-achievements .section {
+  border: 10px solid #00394B;
+  background-color: #E1F8FF;
+  color: #00394B;
+}
+
+/*Momentos Destacados */
+.highlighted-moments .section {
+  border: 10px solid #00394B;
+  background-color: #E1F8FF;
+  color: #00394B;
+}
+
+/*Datos estadisticos adidcionales */
+.additional-data .section {
+  border: 10px solid #00394B;
+  background-color: #E1F8FF;
+  color: #00394B;
+}
 
 /* Slider */
 .container {
@@ -167,3 +225,8 @@ ul.slider li:target {
 }
 
 /* Slider */
+
+
+
+
+

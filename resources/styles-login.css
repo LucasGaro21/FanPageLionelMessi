@@ -40,6 +40,7 @@ nav a:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -56,6 +57,7 @@ body {
   margin-bottom: 100px;
   padding: 20px 30px;
   color: whitesmoke;
+  font-size: 15px;
 }
 
 .login h1 {
@@ -122,3 +124,26 @@ body {
 .login a:hover {
   color: white;
 }
+
+.login p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login p a {
+  color: #02202c;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login p a:hover {
+  color: white;
+}
+
+
+
+
+
+
+
+

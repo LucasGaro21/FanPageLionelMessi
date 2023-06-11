@@ -1,4 +1,3 @@
-
 <?php
 
 require('database.php');
@@ -16,10 +15,6 @@ if (isset($_POST['save-notice'])) {
   $sql = "INSERT INTO NOTICES(title, description, image) VALUES ('$title', '$description', '$imagen')";
   $query = $conn->prepare($sql);
   $query->execute();
-  
-  
-  
-   
   
 
   $_SESSION['message'] = 'Noticia guardada';
